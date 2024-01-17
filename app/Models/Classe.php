@@ -64,9 +64,8 @@ class Classe extends Model
         public function getAssignSub(){
             return $this->hasMany(Subject_assign_class::class);
         }
-
-        //can may subject be assign
+           //can may subject be assign
         public function getAssignTeacher(){
-             return $this->hasMany(TeacherClass::class);
-        }
+            return $this->hasMany(User::class);
+       }
 }

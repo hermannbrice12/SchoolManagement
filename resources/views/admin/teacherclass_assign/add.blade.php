@@ -29,13 +29,13 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="class_id">Class Name</label>
-                        {{-- @if ($classes->exists?) --}}
+                        @if (!empty($classes))
                         <select id="class_id"name="class_id" class="form-control">
                           @foreach ($classes as $class)
                             <option value="{{$class->id}}" {{$class->id == $teacherclass->classe_id?'selected':''}} >{{$class->name}}</option>
                           @endforeach                         
                         </select>
-                        {{-- @endif --}}
+                        @endif
                     </div>
                     <div class="form-group">
                       <label for="status">Status</label>
@@ -52,7 +52,15 @@
                         @php
                           $checked='';
                         @endphp
-                        @if (!empty($teacherclass->classe->getAssignTeacher))
+
+                      @if (!empty($teacherclass))
+                        @if ($teacherclass->user_id == $teacher->id)
+                            @php
+                                $checked='checked';
+                            @endphp
+                        @endif
+                      @endif
+                        {{-- @if (!empty($teacherclass->classe->getAssignTeacher))
                            @foreach (($teacherclass->classe->getAssignTeacher) as $item)
                            
                             @if ($user->id == $item->user_id)
@@ -61,7 +69,7 @@
                             @endphp
                             @endif
                            @endforeach
-                        @endif
+                        @endif --}}
                       <div>
                         <label for=""><input type="checkbox" {{$checked}}  name="user_id[]" id=""  value="{{$teacher->id}}">{{$teacher->name}}</label>
                       </div>

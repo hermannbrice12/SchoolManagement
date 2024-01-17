@@ -15,6 +15,7 @@
             <a href="{{url('admin/teacher-class/add')}}" class="btn btn-primary m-2">Assign Teacher Class</a>
           </div>
         </div>
+
         @include('flush.message')
         <div class="row">
           <div class="col-md-12">
@@ -36,7 +37,23 @@
                     </tr>
                   </thead>
                   <tbody>
-
+                    @foreach ($teacherclasses as $teacherclass)
+                    <tr>
+                      <td>{{$teacherclass->id}}</td>
+                      <td>{{$teacherclass->class_name}}</td>
+                      <td>{{$teacherclass->teacher_name}}</td>
+                      <td>{{$teacherclass->status?'Active':'Inactive'}}</td>
+                      <td>{{Auth::user()->name}}</td>
+                      <td>{{date('d-m-y',strtotime($teacherclass->created_at))}}</td>
+                      <td>
+                        <a href="{{route('teacherclass.modify',$teacherclass)}}" class="btn btn-primary">Modify</a>
+                        <form action="{{route('teacherclass.delete',$teacherclass)}}" method="post" class="fomr-control d-inline">
+                          @csrf
+                          <button class="btn btn-danger ">Delete</button>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

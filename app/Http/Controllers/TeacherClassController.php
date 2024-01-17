@@ -14,6 +14,8 @@ class TeacherClassController extends Controller
 
         $data['title'] = "Teacher Class assign";
 
+        $data['teacherclasses'] = TeacherClass::tacherclasses();
+
         return view('admin.teacherclass_assign.list',$data);
     }
 
@@ -38,7 +40,7 @@ class TeacherClassController extends Controller
                     $countAlready = TeacherClass::countAlready($value,$request->class_id);
            
                     if(!empty($countAlready)){
-                        dd($countAlready);
+                       // dd($countAlready);
                         $countAlready->status = $request->status;
                         $countAlready->save();
                     }else{
@@ -64,8 +66,17 @@ class TeacherClassController extends Controller
 
     }
 
-    public function modify(TeacherClass $teacherClass){
+    public function modify(TeacherClass $teacherclass){
 
+        $data['classes'] = Classe::getActiveClasses();
+
+        $data['teacherclass'] = $teacherclass;
+
+        $data['teachers']  = User::getTeachers();
+
+      //////  $data['teacherclass'] = ;
+
+        return view('admin.teacherclass_assign.add',$data);
     }
 
     public function update(TeacherClass $teacherClass,Request $request){
