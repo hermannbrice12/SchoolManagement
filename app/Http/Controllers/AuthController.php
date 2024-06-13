@@ -23,7 +23,7 @@ class AuthController extends Controller
         if(!empty(Auth::check())){
 
             if(Auth::user()->user_type ==1){
-                return redirect('admin/dashboard');
+                return redirect('admin/admin/list');
             }else if(Auth::user()->user_type==2){
                 return redirect('teacher/dashboard');
             }else if(Auth::user()->user_type==3){
