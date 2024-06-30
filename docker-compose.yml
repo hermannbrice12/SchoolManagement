@@ -1,9 +1,12 @@
 
 services:
 
-  school-management:
-    container_name: school-management
-    build: .
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: hossain/php
+    container_name: app
     volumes:
       - ./SchoolManagement:/var/www/html
     ports:
