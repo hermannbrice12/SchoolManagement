@@ -6,9 +6,10 @@
   <title> Login </title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <link rel="stylesheet" href="{{url('public/plugins/fontawesome-free/css/all.min.css')}}">
-  <link rel="stylesheet" href="{{url('public/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{url('public/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{url('plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{url('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url('dist/css/adminlte.min.css')}}">
+ 
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -70,8 +71,8 @@
   </div>
 </div>
 
-<script src="{{url('public/plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{url('public/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{url('public/dist/js/adminlte.min.j')}}"></script>
+<script src="{{url('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{url('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url('dist/js/adminlte.min.js')}}"></script>
 </body>
 </html>
