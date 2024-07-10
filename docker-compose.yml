@@ -18,8 +18,6 @@ services:
      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD} 
     ports:
       - 3308:3306
-        #    extra_hosts:
-        #   - "host.docker.internal:host-gateway"
   
   phpmyadmin:
     image: phpmyadmin:latest
