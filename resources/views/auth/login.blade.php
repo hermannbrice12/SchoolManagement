@@ -14,7 +14,7 @@
 <div class="login-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Login</b></a>
+      <a href="{{url('/')}}" class="h1"><b>Login</b></a>
     </div>
     <div class="card-body">
         @include('flush.message')

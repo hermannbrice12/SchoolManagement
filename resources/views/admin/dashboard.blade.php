@@ -10,12 +10,6 @@
         <div class="col-sm-6">
           <h1 class="m-0">Dashboard</h1>
         </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Dashboard v1</li>
-          </ol>
-        </div>
       </div>
     </div>
   </div>
@@ -27,7 +21,6 @@
           <div class="small-box bg-info">
             <div class="inner">
               <h3>150</h3>
-
               <p>New Orders</p>
             </div>
             <div class="icon">
@@ -76,14 +69,14 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row m-3" style="font-size: 1.5rem;">
         <p>Creating a more comprehensive school management system that includes student, parent, teacher management, subjects, and classes involves several steps. Below is an extended version of the previous implementation, incorporating these additional components.</p>
         <ol>
-          <li>Student Management: Add, update, delete, and view student information.</li>
-          <li>arent Management: Add, update, delete, and view parent information.</li>
-          <li>Teacher Management: Add, update, delete, and view teacher information.</li>
-          <li>Subject Management: Add, update, delete, and view subject information</li>
-          <li>Class Management: Schedule classes, assign teachers and subjects, and manage class lists</li>
+          <li><p>Student Management: Add, update, delete, and view student information.</p></li>
+          <li><p>arent Management: Add, update, delete, and view parent information.</p></li>
+          <li><p>Teacher Management: Add, update, delete, and view teacher information.</p></li>
+          <li><p>Subject Management: Add, update, delete, and view subject information</p></li>
+          <li><p>Class Management: Schedule classes, assign teachers and subjects, and manage class lists</p></li>
         </ol>
       </div>
     </div>

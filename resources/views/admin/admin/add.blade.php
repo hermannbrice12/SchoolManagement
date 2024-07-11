@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content-wrapper">
-    @include('flush.message')
+    {{-- @include('flush.message') --}}
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">

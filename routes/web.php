@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChangepasswordController;
 use App\Http\Controllers\ClassController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ParentController;
 use App\Http\Controllers\StudentController;
@@ -39,7 +40,8 @@ Route::get('/reset/{token}',[AuthController::class,'reset']);
 Route::post('/reset/{token}',[AuthController::class,'resetpost']);
 
 
-
+//contact
+Route::get('/contact/contact',[ContactController::class,'contact']);
 
 
 Route::middleware('admin')->group(function(){
