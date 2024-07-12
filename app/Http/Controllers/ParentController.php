@@ -142,7 +142,7 @@ class ParentController extends Controller
         
         $data['parent'] = $parent;
 
-        $data['header'] = "¨Parent student list";
+        $data['header'] = "Parent student list";
 
         $data['students'] = User::getSearchStudent();
 
