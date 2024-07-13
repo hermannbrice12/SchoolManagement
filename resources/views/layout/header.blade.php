@@ -86,6 +86,17 @@
             </p>
           </a>>
         </li>
+
+
+        {{-- <li class="nav-item">
+          <a href="{{url('admin/parent/parent_student')}}" class="nav-link {{Request::segment(2)=='parent'?'active':''}}" >
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Parent-Student Assign
+            </p>
+          </a>>
+        </li> --}}
+
         <li class="nav-item">
           <a href="{{url('admin/class/list')}}" class="nav-link {{Request::segment(2)=='class'?'active':''}}" >
             <i class="nav-icon fas fa-user"></i>

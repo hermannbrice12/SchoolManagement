@@ -88,8 +88,8 @@
                             <label for="status">Status<span style="color: red;">*</span></label>
                             <select name="status" id="status" class="form-control">
                               <option value="">Select Class</option>
-                              <option value="0" {{ $student->status =='0'?'selected':'' }}>Active</option>
-                              <option value="1" {{ $student->status =='1'?'selected':'' }}>In Active</option>
+                              <option value="0" {{ $student->status =='1'?'selected':'' }}>Active</option>
+                              <option value="1" {{ $student->status =='0'?'selected':'' }}>In Active</option>
                             </select>
                             <div class="text-danger ms-2">{{ $errors->first('status') }}</div>
                           </div>

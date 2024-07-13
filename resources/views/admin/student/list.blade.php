@@ -93,7 +93,7 @@
                       <th>Admission Date</th>
                       <th>Blood Group</th>
                       <th>Height</th>
-                      <th>Weith</th>
+                      <th>Weigth</th>
                       <th>Email</th>
                       <th>Created Date</th>
                       <th>Actions</th>
@@ -114,7 +114,7 @@
                       <td>{{$student->class_name}}</td>
                       <td>{{$student->gender}}</td>
                       <td>{{$student->birth_date}}</td>
-                      <td>{{$student->status}}</td>
+                      <td>{{$student->status?'active':'inactive'}}</td>
                       <td>{{$student->mobile_number}}</td>
                       <td>{{$student->admission_date}}</td>
                       <td>{{$student->blood_group}}</td>

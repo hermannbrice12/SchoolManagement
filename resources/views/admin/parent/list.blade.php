@@ -116,7 +116,7 @@
                 </table>
               </div>
             </div>
-            {{-- {{ $parents->links() }} --}}
+            {{ $parents->links() }}
           </div>
         </div>
       </div>

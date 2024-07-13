@@ -122,7 +122,7 @@
                 </table>
               </div>
             </div>
-            {{-- {{ $teachers->links() }} --}}
+            {{ $teachers->links() }}
           </div>
         </div>
       </div>
