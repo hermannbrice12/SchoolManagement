@@ -9,11 +9,11 @@ pipeline {
     }
     
     stages { 
-        stage('SCM Checkout') {
-            steps {
-                git branch: 'main', credentialsId: 'd9cc1183-2e7d-4b61-92ad-7416c74a1e61', url: 'https://github.com/hossain109/SchoolManagement.git'
-            }
-        }
+        // stage('SCM Checkout') {
+        //     steps {
+        //         git branch: 'main', credentialsId: 'd9cc1183-2e7d-4b61-92ad-7416c74a1e61', url: 'https://github.com/hossain109/SchoolManagement.git'
+        //     }
+        // }
         
         stage('Build and Push Docker Image') {
             steps {
