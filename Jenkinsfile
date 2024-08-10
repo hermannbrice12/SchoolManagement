@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent any
     
     environment {
@@ -18,7 +18,8 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'jenkins-aws', usernameVariable: 'AKIA6ODU4YRF43XSR42A ', passwordVariable: 'H97AESUvyAEBfzUlYzgMZtYp0k1/8dk7+N5vXNCO')]) {
+                    withCredentials([usernamePassword(credentialsId: 'jenkins-aws', usernameVariable: 'AKIA6ODU4YRF43XSR42A ', 
+                    passwordVariable: 'H97AESUvyAEBfzUlYzgMZtYp0k1/8dk7+N5vXNCO')]) {
                         // Login to ECR
                         sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${URL_REGISTRY}"
 
@@ -35,5 +36,23 @@ pipeline {
                 }
             }
         }
+    }
+}*/
+
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') { 
+            steps {
+               git branch: 'main', credentialsId: '413a06e0-091b-4f7e-9864-e2f7cf2b4ae8', url: 'https://github.com/hossain109/SchoolManagement.git'
+            }
+        }
+        stage('Test') { 
+            steps {
+              echo "Tested" 
+            }
+        }
+
     }
 }
