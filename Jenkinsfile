@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages { 
+    stages {
         stage('SCM Checkout') {
             steps {
                git branch: 'main', credentialsId: 'a01881d0-87b2-4ec7-8f11-5731cebfe0ea', url: 'https://github.com/hossain109/SchoolManagement.git'
