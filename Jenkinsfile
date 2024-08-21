@@ -7,11 +7,11 @@ pipeline {
             }
         }
         stage('Build and Push Docker Image') { 
-            steps {
-               aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 992382600267.dkr.ecr.eu-west-3.amazonaws.com
-                docker build -t schoolmanagement .
-                docker tag schoolmanagement:latest 992382600267.dkr.ecr.eu-west-3.amazonaws.com/schoolmanagement:latest
-                docker push 992382600267.dkr.ecr.eu-west-3.amazonaws.com/schoolmanagement:latest 
+            script {
+                sh "aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 992382600267.dkr.ecr.eu-west-3.amazonaws.com"
+                sh "docker build -t schoolmanagement ."
+                sh "docker tag schoolmanagement:latest 992382600267.dkr.ecr.eu-west-3.amazonaws.com/schoolmanagement:latest"
+                sh "docker push 992382600267.dkr.ecr.eu-west-3.amazonaws.com/schoolmanagement:latest"
             }
         }
     }
