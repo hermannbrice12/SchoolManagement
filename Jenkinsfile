@@ -9,13 +9,12 @@ pipeline {
         stage('Build and Push Docker Image') { 
             steps{
                 script {
-                    withCredentials([usernamePassword(credentialsId: '992382600267', usernameVariable: 'AKIA6ODU4YRFUHPTRQ4Y ', 
-                    passwordVariable: 'u3SjATqeG6Vw5cNYa38saak+KqcNYzE4zuruJ3as')]) {
+                    
                     sh "aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 992382600267.dkr.ecr.eu-west-3.amazonaws.com"
                     sh "docker build -t schoolmangement ."
                     sh "docker tag schoolmangement:latest 992382600267.dkr.ecr.eu-west-3.amazonaws.com/schoolmangement:latest"
                     sh "docker push 992382600267.dkr.ecr.eu-west-3.amazonaws.com/schoolmangement:latest"
-                    }
+                    
                 }
             }
         }
