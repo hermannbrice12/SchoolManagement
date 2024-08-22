@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM Checkout') { 
             steps {
-               git branch: 'main', credentialsId: '992382600267', url: 'https://github.com/hossain109/SchoolManagement.git'
+              git branch: 'main', credentialsId: '992382600267', url: 'https://github.com/hossain109/SchoolManagement.git'
             }
         }
         stage('Build and Push Docker Image') { 
