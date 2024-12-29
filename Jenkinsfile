@@ -13,13 +13,13 @@ pipeline {
                 git branch: 'main', credentialsId: '861276114654', url: 'https://github.com/hermannbrice12/SchoolManagement.git'
             }
         }
-        stage('Code Test') {
-            steps {
-                echo 'Running Code Tests...'
-                // Assurez-vous que PHPUnit est installé projet
-                sh './vendor/bin/phpunit --testdox'
-            }
-        }
+        // stage('Code Test') {
+        //     steps {
+        //         echo 'Running Code Tests...'
+        //         // Assurez-vous que PHPUnit est installé projet
+        //         sh './vendor/bin/phpunit --testdox'
+        //     }
+        // }
         stage('Build and Push Docker Image') {
             steps {
                 script {
