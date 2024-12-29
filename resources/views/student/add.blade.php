@@ -26,7 +26,7 @@
                         <input type="password" class="form-control" value="" name="current" id="current" placeholder="Enter current password">
                     </div>
                   <div class="form-group">
-                    <label for="new">New password for student</label>
+                    <label for="new">New password</label>
                     <input type="password" class="form-control" name="new" id="new" value="" placeholder="Enter New password">
                   </div>
                 </div>

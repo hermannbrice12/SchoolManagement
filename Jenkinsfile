@@ -3,17 +3,14 @@ pipeline {
     environment {
         AWS_REGION = 'eu-west-3'
         ECR_REPO = 'schoolmanagement'
-        AWS_ACCOUNT_ID = '992382600267'
+        AWS_ACCOUNT_ID = '861276114654'
         URL_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-        CLUSTER_NAME='schoolmanagement-cluster'
-        SERVICE_NAME='my-service'
-        TASK_DEFINITION='schoolmanagement-task'
     }
     
     stages { 
         stage('SCM Checkout') {
             steps {
-                git branch: 'main', credentialsId: '992382600267', url: 'https://github.com/hossain109/SchoolManagement.git'
+                git branch: 'main', credentialsId: '861276114654', url: 'https://github.com/hermannbrice12/SchoolManagement.git'
             }
         }
         stage('Code Test') {
@@ -40,21 +37,5 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to AWS Fargate') {
-            steps {
-                script {
-                    // Mise à jour de la définition de tâche et du service ECS en une seule commande
-                    sh """
-                    aws ecs update-service \
-                        --cluster ${CLUSTER_NAME} \
-                        --service ${SERVICE_NAME} \
-                        --task-definition ${TASK_DEFINITION} \
-                        --force-new-deployment \
-                        --region ${AWS_REGION}
-                    """
-                }
-            }
-        }
-
     }
 }
